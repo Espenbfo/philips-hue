@@ -1,5 +1,6 @@
 import requests
 import json
+import sys
 
 #Username and ip adress in seperate files
 with open("username.txt") as f:
@@ -14,12 +15,6 @@ light = 5
 url = "https://" + ipadress + "/api/" + username + "/lights/" + str(light) + "/state"
 
 
-messagebody = {
-    "on":True,
-    "sat":254,
-    "bri":254,
-    "hue":30000
-}
 
 print(json.dumps(messagebody))
 
