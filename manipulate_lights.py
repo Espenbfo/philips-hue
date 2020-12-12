@@ -14,7 +14,12 @@ light = 5
 
 url = "https://" + ipadress + "/api/" + username + "/lights/" + str(light) + "/state"
 
-
+messagebody = {
+    "on": True,
+    "hue": 30000,
+    "sat": 254,
+    "bri": 254,
+}
 
 print(json.dumps(messagebody))
 
