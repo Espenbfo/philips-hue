@@ -3,6 +3,7 @@ import json
 import datetime
 from light_group import LightGroup
 import time
+import sys
 
 #print("sunrise", sunrise)
 #print("sunset", sunset)
@@ -10,7 +11,11 @@ import time
 #print(now)
 #print(now["symbol"]["@name"])
 
-light_group = LightGroup(3)
+cmd_args = sys.argv
+if len(cmd_args) > 1:
+    light_group = LightGroup(cmd_args[1])
+else:
+    light_group = LightGroup(3)
 
 cold = [40000, 50, 254]
 warm = [10000, 150, 254]
