@@ -31,4 +31,5 @@ for i in range(len(cmd_args)-1):
 
 x = requests.put(url, data=json.dumps(messagebody), verify=False)
 
+print(x.status_code)
 print(x.text)
