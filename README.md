@@ -2,7 +2,7 @@
 This project is a collection of python files meant to change my hue lights in interesting ways.
 
 ## Setup
-In order to run any file you need to add two files. If you need help finding the ip adress of your bridge or creating a 
+In order to run any of the python files you need to create two more txt files. If you need help finding the ip address of your bridge or creating a 
 user, you can find help here: https://developers.meethue.com/develop/get-started-2/ 
 ##### ipadress.txt
 Is the ipadress of your philips bridge
