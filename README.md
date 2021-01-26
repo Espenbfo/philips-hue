@@ -2,7 +2,8 @@
 This project is a collection of python files meant to change my hue lights in interesting ways.
 
 ## Setup
-In order to run any of the python files you need to create two more txt files. If you need help finding the ip address of your bridge or creating a 
+In order to run any of the python files you need to create two more txt files. If you need help finding the ip 
+address of your bridge or creating a 
 user, you can find help here: https://developers.meethue.com/develop/get-started-2/ 
 ##### ipadress.txt
 Is the ipadress of your philips bridge
@@ -19,7 +20,8 @@ python change_color.py hue sat bri
 This file makes a group of lights or a single light change color in a rainbow pattern.
 
 #### yr_api.py
-This program changes your lights based on the weather outside, and if the sun is up.
+This program changes your lights based on the weather outside, and if the sun is up. You can specify the group id 
+you want to change in the command line
 ```shell 
-python yr_api.py
+python yr_api.py group_id
 ```
