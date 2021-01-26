@@ -19,11 +19,12 @@ if len(cmd_args) > 1:
     light_group = LightGroup(cmd_args[1])
 else:
     light_group = LightGroup(3)
+light_group.transition_time = 600
 
 COLD_LIGHT = [40000, 50, 100]
 WARM_LIGHT = [10000, 150, 254]
 NEUTRAL_LIGHT = [10000, 150, 150]
-SUNDOWN_LIGHT = [10000, 150, 1200]
+SUNDOWN_LIGHT = [10000, 150, 120]
 
 # You can see what each symbol looks like here:
 # https://hjelp.yr.no/hc/en-us/articles/203786121-Weather-symbols-on-Yr

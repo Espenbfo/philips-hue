@@ -18,7 +18,8 @@ class LightGroup:
         self.sat = 254
         self.bri = 254
         self.username = username
-        self.ipadress = ipadress
+        self.ip_adress = ipadress
+        self.transition_time = 1
 
     def update_values(self, on, hue, sat, bri):
         self.on = on
@@ -32,8 +33,9 @@ class LightGroup:
             "hue": self.hue,
             "sat": self.sat,
             "bri": self.bri,
+            "transitiontime": self.transition_time,
         }
-        url = "https://" + self.ipadress + "/api/" + self.username + \
+        url = "https://" + self.ip_adress + "/api/" + self.username + \
               "/groups/" + str(self.group_id) + "/action"
         x = requests.put(url, data=json.dumps(messagebody), verify=False)
         return x
