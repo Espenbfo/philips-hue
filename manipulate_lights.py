@@ -1,7 +1,12 @@
-import requests
+"""
+Rainbow pattern lights
+"""
+
 import json
 import sys
 import time
+import requests
+
 # Username and ip adress in seperate files
 with open("username.txt") as f:
     username = f.read()
@@ -34,10 +39,9 @@ while True:
     last_time,messagebody["transitiontime"] = current_time,int((current_time- last_time)*100)+1
     print(messagebody["transitiontime"])
     messagebody["hue"] = (messagebody["hue"]+1000)%65000
-    
-    x = requests.put(url, data = json.dumps(messagebody), verify=False)
+    response = requests.put(url, data = json.dumps(messagebody), verify=False)
 
-    while (x.status_code != 200):
+    while (response.status_code != 200):
         print("hei")
         time.sleep(1.0)
-    print(x.text)
+    print(response.text)

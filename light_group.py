@@ -1,5 +1,9 @@
-import requests
+"""
+Light group
+"""
+
 import json
+import requests
 
 with open("username.txt") as f:
     username = f.read()
@@ -29,6 +33,7 @@ class LightGroup:
             "sat": self.sat,
             "bri": self.bri,
         }
-        url = "https://" + self.ipadress + "/api/" + self.username + "/groups/" + str(self.group_id) + "/action"
+        url = "https://" + self.ipadress + "/api/" + self.username + \
+              "/groups/" + str(self.group_id) + "/action"
         x = requests.put(url, data=json.dumps(messagebody), verify=False)
         return x

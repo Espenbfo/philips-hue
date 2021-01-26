@@ -1,6 +1,11 @@
-import requests
-import json
+"""
+Change color
+"""
+
 import sys
+import json
+import requests
+
 
 # Username and ip adress in seperate files
 with open("username.txt") as f:
@@ -9,9 +14,9 @@ with open("ipadress.txt") as f:
     ipadress = f.read()
 
 # The id of your chosen light
-light = 5
+LIGHT = 5
 
-url = "https://" + ipadress + "/api/" + username + "/lights/" + str(light) + "/state"
+url = "https://" + ipadress + "/api/" + username + "/lights/" + str(LIGHT) + "/state"
 
 cmd_args = sys.argv
 

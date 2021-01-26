@@ -1,10 +1,13 @@
-from yr.libyr import Yr
+"""
+Changes lights based on outside weather
+"""
+
 import json
-import datetime
-from light_group import LightGroup
 import time
 import sys
-
+import datetime
+from yr.libyr import Yr
+from light_group import LightGroup
 #print("sunrise", sunrise)
 #print("sunset", sunset)
 
