@@ -24,11 +24,11 @@ light_group.transition_time = 600
 COLD_LIGHT = [40000, 50, 100]
 WARM_LIGHT = [10000, 150, 254]
 NEUTRAL_LIGHT = [10000, 150, 150]
-SUNDOWN_LIGHT = [10000, 150, 120]
+SUNDOWN_LIGHT = [8000, 150, 200]
 
 # You can see what each symbol looks like here:
 # https://hjelp.yr.no/hc/en-us/articles/203786121-Weather-symbols-on-Yr
-cold_light_weather = ['fair', 'clearsky']
+cold_light_weather = ['fair', 'clearsky','partlycloudy']
 
 warm_light_weather = [ 'lightsnowandthunder','lightsnow',
                        "lightsleetandthunder", 'lightrainandthunder',
@@ -39,7 +39,7 @@ warm_light_weather = [ 'lightsnowandthunder','lightsnow',
                        'snowandthunder', 'sleetandthunder',
                        'heavyrainandthunder']
 
-neutral_light_weather = ['partlycloudy','rainshowers',
+neutral_light_weather = ['rain showers',
                          'lightssnowshowersandthunder','heavyrainshowers',
                          'lightssleetshowersandthunder','heavysleetshowers',
                          'snowshowersandthunder','heavysnowshowers',
@@ -63,7 +63,7 @@ while True:
 
     time_now = datetime.datetime.now()
 
-    weather_nom_symbol = weather_now["symbol"]["@name"]
+    weather_nom_symbol = weather_now["symbol"]["@name"].lower().replace(" ", "")
     if not sunrise < time_now < sunset:
         light_group.update_values(True, *SUNDOWN_LIGHT)
     elif weather_nom_symbol in warm_light_weather:
