@@ -1,5 +1,5 @@
 # philips-hue
-This project is a collection of python files meant to change my hue lights in interesting ways.
+This project is a collection of python files meant to change my hue lights in interesting ways. The most interesting program here is yr_api.py, which connects your lights to the yr api, and changes color based on the weather.
 
 ## Setup
 In order to run any file you need to add two files. If you need help finding the ip adress of your bridge or creating a 
